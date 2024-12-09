@@ -1,0 +1,71 @@
+
+@font-face {
+	font-family: 'Oswald'; 
+	src: url(../fonts/Oswald-Regular.ttf); 
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+p{
+    font-family: 'Oswald';
+}
+h1{
+    font-family: 'Oswald';
+}
+.title-h1{
+    font-size: 40px;
+    font-weight: normal;
+    padding-bottom: 20px;
+}
+li{
+    list-style-type: none;
+}
+a{
+    font-family: 'Oswald';
+    color: black;
+    text-decoration: none;
+}
+.style-button{
+    border: none;
+    padding: 10px 80px;
+    font-size: 20px;
+    color: #fff;
+    background: #cb997e;
+    border-radius: 5px;
+}
+
+#main{
+    position: relative;
+    padding: 50vh;
+}
+#auth{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+#authorization-form{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    font-family: 'Oswald';
+    font-size: 20px;
+    border: #4d636a;
+    border: none;
+    padding: 10px 5px;
+    box-shadow: 0px 6px 10px 0px rgba(34, 60, 80, 0.2); 
+    margin-bottom: 20px;
+}
+input#send{
+    box-shadow: none;
+    cursor: pointer;
+}
+#authorization p{
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}

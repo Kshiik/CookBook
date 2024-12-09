@@ -1,0 +1,263 @@
+
+@font-face {
+	font-family: 'Oswald'; 
+	src: url(../fonts/Oswald-Regular.ttf); 
+}
+@font-face {
+	font-family: 'OswaldBold'; 
+	src: url(../fonts/Oswald-Bold.ttf); 
+}
+@font-face {
+	font-family: 'OswaldLight'; 
+	src: url(../fonts/Oswald-Light.ttf); 
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+p{
+    font-family: 'Oswald';
+}
+span{
+    font-family: 'Oswald';
+}
+#main p{
+    font-size: calc(24px + 8 * (100vw - 320px) / 880);
+}
+h1{
+    font-family: 'Oswald';
+}
+.title-h1{
+    font-size: calc(80px + 8 * (100vw - 320px) / 880);
+    font-weight: normal;
+    /* text-align: center; */
+}
+h2{
+    font-family: 'OswaldLight';
+}
+.title-h2 {
+    font-size: calc(40px + 8 * (100vw - 320px) / 880);
+    font-weight: normal;
+    padding-bottom: 2vh;
+}
+li{
+    list-style-type: none;
+}
+a{
+    font-family: 'Oswald';
+    color: black;
+    text-decoration: none;
+}
+.style-button{
+    width: 50%;
+    font-family: 'Oswald';
+    border: none;
+    padding: 10px 20px;
+    font-size: 24px;
+    color: #fff;
+    background: #cb997e;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type=text]{
+    font-family: 'Oswald';
+    font-size: 24px;
+    width: 100%;
+    border: #4d636a;
+    border: none;
+    padding: 10px 5px;
+    border-radius: 5px;
+    box-shadow: 0px 6px 10px 0px rgba(34, 60, 80, 0.2); 
+}
+
+/* профиль */
+#profile-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+#title-container{
+    width: 90%;
+    padding: 0 5%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+#arrows{
+    display: flex;
+}
+#arrows p{
+    font-size: calc(40px + 8 * (100vw - 320px) / 880);
+    color: #463535;
+}
+#arrow1, #arrow2{
+    cursor: pointer;
+}
+/* #arrow2{
+    display: none;
+}
+#arrow1:focus{
+    #arrow2{
+        display: block;
+    }
+    #arrow1{
+        display: none;
+    }
+} */
+#user-data-container, #user-save-recipes {
+    width: 45%;
+    transition: transform 0.3s ease;
+}
+/* данные */
+#user-data-container{
+    transform: translateX(100%);
+    padding-right: 5%;
+}
+#user-data{
+    padding-bottom: 2vh;
+}
+#user-data *{
+    display: flex;
+    justify-content: space-between;
+}
+#btn-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+}
+dialog{
+    position: fixed;
+    width: calc(100% - 40px);
+    max-width: 400px;
+    padding: 1em 8em;
+    border: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+dialog::backdrop{
+    background-color: rgb(0 0 0 / 0.6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+#editWindow::before, #editWindow::after {
+    box-sizing: border-box;
+}
+p#title-form{
+    font-size: calc(20px + 8*(100vw - 320px) / 880);
+    margin-bottom: 20px;
+}
+dialog form{
+    display: flex; 
+    flex-wrap: wrap; 
+    row-gap: 10px;
+}
+dialog form#exit-form{
+    justify-content: space-between;
+}
+#edit-form input{
+    flex: -1; 
+}
+#edit-lastname{
+    margin-bottom: 30px;
+}
+#exit-btn{
+    color: #cb997e;
+    background: #fff;
+    padding: 10px 0;
+    text-align: center;
+    outline: none;
+    border: #cb997e 2px solid;
+}
+#cancel-btn{
+    flex: 1;
+    margin-left: 10px;
+}
+
+/* сохраненные рецепты */
+#user-save-recipes {
+    /* transform: translateX(100%);     */
+    padding-left: 5%;
+}
+#save-recipes{
+    display: grid;
+    row-gap: 20px;
+}
+.save-recipe{
+    display: grid;
+    grid-template-columns: 85% 15%;
+    height: 25vh;
+}
+.save-recipe a{
+    display: flex;
+}
+.img-save-recipe{
+    width: 40%;
+    height: 25vh;
+    object-fit: cover;
+}
+.title-save-recipe{
+    padding: 2vh 0;
+}
+.img-delete{
+    background-color: #eef1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+.delete-recipe{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.delete-recipe svg{
+    width: 50%;
+}
+.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #4d5052;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    
+    position: absolute;
+    z-index: 1;
+    top: 45%;
+    left: 105%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.img-delete button:hover + .tooltiptext { 
+    visibility: visible;
+    opacity: 1; 
+}
+.img-delete button:hover path,
+.img-delete button:focus path{
+    fill: #972724;
+}
+
+/* окно вход/регистрации */
+#auth-container{
+    position: relative;
+    padding: 20vh;
+}
+#container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    padding: 30px 60px 60px 60px;
+    box-shadow: 0px 6px 10px 0px rgba(34, 60, 80, 0.2); 
+}
+#container p{
+    font-size: 32px;
+    margin-bottom: 20px;
+}

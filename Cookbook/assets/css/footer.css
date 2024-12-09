@@ -1,0 +1,30 @@
+#footer{
+    width: 80%;
+    padding: 15vh 10% 2vh 10%;
+    margin-top: 10vh;
+    
+    background: #463535;
+    color: #fff;
+}
+#footer-container{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2vh;
+}
+#footer-container__links li{
+    line-height: 2;
+}
+#footer-container__links a{
+    font-family: 'OswaldLight';
+    font-size: 24px;
+    color: #fff;
+}
+#footer-container__social img{
+    width: 40px;
+}
+#copyright{
+    text-align: center;
+    font-weight: normal;
+    font-family: 'OswaldExtraLight';
+    border-top: #fff solid 1px;
+}

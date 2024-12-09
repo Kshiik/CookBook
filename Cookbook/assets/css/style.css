@@ -1,0 +1,358 @@
+@font-face {
+	font-family: 'Oswald'; 
+	src: url(../fonts/Oswald-Regular.ttf); 
+}
+@font-face {
+	font-family: 'OswaldBold'; 
+	src: url(../fonts/Oswald-Bold.ttf); 
+}
+@font-face {
+	font-family: 'OswaldLight'; 
+	src: url(../fonts/Oswald-Light.ttf); 
+}
+@font-face {
+	font-family: 'OswaldExtraLight'; 
+	src: url(../fonts/Oswald-ExtraLight.ttf); 
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+p{
+    font-family: 'Oswald';
+}
+h1{
+    font-family: 'Oswald';
+}
+.title-h1{
+    font-size: calc(80px + 8 * (100vw - 320px) / 880);
+    padding: 4vh 0;
+}
+h2{
+    font-family: 'OswaldExtraLight';
+}
+.title-h2 {
+    font-size: calc(100px + 8 * (100vw - 320px) / 880);
+    font-weight: normal;
+    padding-bottom: 5vh;
+}
+li{
+    list-style-type: none;
+}
+a{
+    font-family: 'Oswald';
+    color: black;
+    text-decoration: none;
+}
+.style-button{
+    border: none;
+    padding: 10px 80px;
+    font-size: 24px;
+    color: #fff;
+    background: #cb997e;
+    border-radius: 5px;
+}
+
+/* заголовк страницы */
+#main-block{
+    width: 100%;
+    height: 100vh;
+}
+#title-text{
+    width: 45%;
+    padding-left: 5%;
+}
+#discription p.text{
+    font-size: calc(20px + 8 * (100vw - 320px) / 880);
+    padding-bottom: 5vh;
+}
+#main{
+    position: relative;
+    display: inline-block;
+    overflow-x: hidden;
+}
+#container1-main-img{
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    left: 55%;
+}
+#main-img{
+    height: 105vh;
+    /* height: 120%; */
+}
+
+#search{
+    position: relative;
+}
+#search-container{
+    position: absolute;
+    width: 100%;
+    background-color: #463535;
+}
+#search-form{
+    display: flex;
+    padding: 30px 5%;
+}
+#input-search{
+    border: none;
+    outline: none;
+    background: none;
+
+    width: 30%;
+    font-size: calc(20px + 8 * (100vw - 320px) / 880);
+    color: #fff;
+    border-bottom: #fff 3px solid;
+    margin-right: 20px;
+}
+input#input-search::placeholder{
+    color: #A29A9A;
+    font-family: 'Oswald'; 
+}
+#btn-search{
+    border: none;
+    background: none;
+}
+
+/* категории блюд (идеи) */
+#categories{
+    width: 80%;
+    padding: 2vh 10%;
+}
+#categories-items{
+    /* display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 10%; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-items: center;
+}
+.category-item{
+    min-width: calc(100% / 3);
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+
+.img-category{
+    width: 70%;
+}
+.name-category{
+    font-size: calc(20px + 8 * (100vw - 320px) / 880);
+    text-align: center;
+}
+
+/* популярное */
+#popular{
+    width: 100%;
+    padding: 4vh 0;
+
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),  url(../img/background/img-background2.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/* #popular{
+    background-image: url(../img/img-background2.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+    background-color: rgba(255, 255, 255, 0.5);
+    opacity: 0.5;
+} */
+#popular .title{
+    padding-top: 20vh;
+}
+#popular-dish{
+    padding: 0 5%;
+}
+#popular-dish-items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 2%;
+}
+
+.popular-dish-item {
+    padding-bottom: 5vh;
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0; 
+    transition: 0.5s all ease;
+}
+.popular-dish-item.active {
+    transform: translateY(0); 
+    opacity: 1; 
+}
+
+.popular-dish-item .img-dish{
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+.popular-dish-item .name-dish{
+    text-transform: uppercase;
+    font-size: calc(20px + 8 * (100vw - 320px) / 880);
+}
+.btn-more{
+    text-align: center;
+}
+
+/* небольшой текст */
+#information{
+    position: relative;
+    width: 100%;
+    padding: 15vh 0;
+}
+#container_solor{
+    width: 80%;
+    height: 15vh;
+    background-color: #cb997e7c;
+}
+#text_information p.text{
+    position: absolute;
+    width: 80%;
+    bottom: 50%;
+    left: 20%;
+
+    font-size: calc(25px + 8 * (100vw - 320px) / 880);
+}
+
+/* советы */
+#advices{
+    width: 100%;
+    padding: 4vh 0 30vh 0;
+
+    background: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),  url(../img/background/img-background1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+#advices-items{
+    display: flex;
+    column-gap: 2%;
+    padding: 0 5%;
+}
+.advices-item{
+    width: calc(100% / 3);
+}
+.advices-item:hover{
+    box-shadow: 0px 6px 30px 0px rgba(34, 60, 80, 0.4);
+    background: #fff;
+    transition: margin-top 0.5s ease;
+    transition: box-shadow, background, 0.2s ease;
+    transform: translateY(-30px);
+}
+.advices-item-img{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+.advices-item-text{
+    /* height: 20vh; */
+    font-size: calc(20px + 8 * (100vw - 320px) / 880);
+    line-height: 1.5;
+    padding: 30px 15px;
+}
+
+@media (max-width: 780px) {
+    #main-block{
+        height: 80vh;
+    }
+    .title-h1{
+        font-size: calc(50px + 8 * (100vw - 320px) / 880);
+        padding: 0 0;
+    }
+    #text_information p.text{
+        bottom: 35%;
+        font-size: calc(25px + 8 * (100vw - 320px) / 880);
+    }
+    #main-img{
+        height: 80vh;
+    }
+    #categories{
+        width: 100%;
+        padding: 0 0;
+    }
+    .popular-dish-item .img-dish{
+        height: 25vh;
+    }
+    #container_solor{
+        height: 20vh;
+    }
+    #advices{
+        padding: 2vh 0 10vh 0;
+    }
+    .advices-item-img{
+        height: 30vh;
+    }
+    .advices-item-text {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .title-h1{
+        font-size: calc(30px + 8 * (100vw - 320px) / 880);
+        padding: 0 0;
+    }
+    .title-h2 {
+        font-size: calc(40px + 8 * (100vw - 320px) / 880);
+    }
+    /* заголовк страницы */
+    #main-block{
+        height: 80vh;
+    }
+    #title-text{
+        width: 90%;
+        padding: 0 2%;
+    }
+    #input-search{
+        width: 100%;
+    }
+    #container1-main-img{
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 5%;
+        left: -5%;
+    }
+    #main-img{
+        height: 45vh;
+    }
+    #search{
+        display: none;
+    }
+    /* популярное */
+    #popular .title {
+        padding-top: 0;
+    }
+    #popular-dish-items{
+        grid: none;
+    }
+    /* текст */
+    #information{
+        padding: 10vh 0;
+    }
+    #text_information p.text{
+        bottom: 35%;
+        font-size: calc(18px + 8 * (100vw - 320px) / 880);
+    }
+    /* советы */
+    #advices{
+        padding: 2vh 0 10vh 0;
+    }
+    #advices-items{
+        flex-direction: column;
+        row-gap: 3vh;
+    }
+    .advices-item{
+        width: calc(100% / 1);
+    }
+    .advices-item-img{
+        height: 30vh;
+    }
+    .advices-item-text {
+        padding: 10px 0;
+    }
+}
